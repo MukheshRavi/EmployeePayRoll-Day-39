@@ -1,6 +1,11 @@
 class EmployeePayRoll 
 {
    // getter and setter method
+   get id() { return this._id; }
+   set id(id) { 
+     this._id = id; 
+   }
+
    get name() { return this._name; }
    set name(name) { 
      let nameRegex = RegExp('^[A-Z]{1}[a-zA-Z]{2,}$');
@@ -46,7 +51,7 @@ class EmployeePayRoll
  
    // method
    toString() {
-     return " name='" + this.name + ", gender='" + this.gender + 
+     return "id=" + this.id +" name='" + this.name + ", gender='" + this.gender + 
             ", profilePic='" + this.profilePic + ", department=" + this.department +
             ", salary=" + this.salary + ", startDate=" + this.startDate + ", note=" + this.note;
    }
